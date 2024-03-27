@@ -1,0 +1,20 @@
+const valor = require("readline-sync");
+
+let a, b, c;
+a = valor.questionInt("Digite um numero inteiro: ");
+b = valor.questionInt("Digite outro numero inteiro: ");
+c = valor.questionInt("Digite o ultimo numero inteiro: ");
+
+if (a + b > c) {
+  console.log(`${a} + ${b} > ${c}`);
+  console.log("A soma de A + B é maior que C") 
+
+} else if (a + b < c) { 
+  console.log(`${a} + ${b} < ${c}`);
+  console.log("A soma de A + B é menor que C")
+
+} else {
+  console.log(`${a} + ${b} = ${c}`);
+  console.log("A some de A + B é igual a C");
+
+}

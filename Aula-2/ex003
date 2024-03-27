@@ -1,0 +1,25 @@
+const leia = require("readline-sync");
+
+let numero1, numero2, operacao;
+
+numero1 = leia.questionFloat("Digite um numero: ");
+numero2 = leia.questionFloat("Digite o segundo numero: ");
+console.log(" 1 = Soma\n 2 = Subtração\n 3 = Multiplicação\n 4 = Divisão");
+operacao = leia.questionInt("Digite um numero de 1 a 4: ");
+
+switch (operacao) {
+  case 1:
+    console.log(`${numero1} + ${numero2} = ${numero1 + numero2}`);
+    break;
+  case 2:
+    console.log(`${numero1} - ${numero2} = ${numero1 - numero2}`);
+    break;
+  case 3:
+    console.log(`${numero1} * ${numero2} = ${numero1 * numero2}`);
+    break;
+  case 4:
+    console.log(`${numero1} / ${numero2} = ${numero1 / numero2}`);
+    break;
+  default:
+    console.log("Opção inválida.");
+}

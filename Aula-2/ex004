@@ -1,0 +1,34 @@
+const leia = require("readline-sync");
+
+let operacao, saldo;
+saldo = 1000.00;
+
+console.log("1- Saldo\n2- Saque \n3- Depósito");
+operacao = leia.questionInt("Insira um numero de 1 a 3: ");
+
+switch (operacao) {
+  case 1:
+    console.log("Operação saldo");
+    console.log(`O saldo da conta é ${saldo.toFixed(2)}`);
+    break;
+  case 2:
+    console.log("Operação saque")
+    let saque = leia.questionFloat("Insira o valor do saque: ");
+    
+    if (saldo >= saque){
+      console.log("Saque efetuado com sucesso! O novo saldo da conta é de: ", (saldo - saque));
+
+
+    } else {
+      console.log("Saldo insuficiente.");
+    }
+
+    break;
+  case 3:
+    console.log("Operação depósito");
+    let deposito = leia.questionFloat("Insira o valor do deposito: ");
+    console.log(`O novo saldo da sua conta é de: ${saldo + deposito}`);
+    break;
+    default:
+      console.log("Operação inválida!");
+}
